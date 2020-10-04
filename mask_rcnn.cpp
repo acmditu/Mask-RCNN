@@ -232,6 +232,7 @@ void drawBox(Mat& frame, int classId, float conf, Rect box, Mat& objectMask)
     
     //Display the label at the top of the bounding box
     int baseLine;
+    int xy;
     Size labelSize = getTextSize(label, FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
     box.y = max(box.y, labelSize.height);
     rectangle(frame, Point(box.x, box.y - round(1.5*labelSize.height)), Point(box.x + round(1.5*labelSize.width), box.y + baseLine), Scalar(255, 255, 255), FILLED);
