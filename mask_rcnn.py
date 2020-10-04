@@ -179,3 +179,4 @@ while cv.waitKey(1) < 0:
 
     cv.imshow(winName, frame)
 print("Hacktober Fest")
+print("updating")
