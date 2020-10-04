@@ -131,6 +131,10 @@ int main(int argc, char** argv)
         if (frame.empty()) {
             cout << "Done processing !!!" << endl;
             cout << "Output file is stored as " << outputFile << endl;
+            
+            // hacktober contribution
+            cout << "its hacktober" << endl;
+            
             waitKey(3000);
             break;
         }
