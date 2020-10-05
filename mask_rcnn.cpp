@@ -130,7 +130,7 @@ int main(int argc, char** argv)
         // Stop the program if reached end of video
         if (frame.empty()) {
             cout << "Done processing !!!" << endl;
-            cout << "Output File is stored as " << outputFile << endl;
+
             waitKey(3000);
             break;
         }
