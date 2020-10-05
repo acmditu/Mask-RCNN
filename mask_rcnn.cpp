@@ -253,6 +253,5 @@ void drawBox(Mat& frame, int classId, float conf, Rect box, Mat& objectMask)
     findContours(mask, contours, hierarchy, RETR_CCOMP, CHAIN_APPROX_SIMPLE);
     drawContours(coloredRoi, contours, -1, color, 5, LINE_8, hierarchy, 100);
     coloredRoi.copyTo(frame(box), mask);
-    printf("Hactober");
 
 }
