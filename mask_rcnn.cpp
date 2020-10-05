@@ -108,7 +108,7 @@ int main(int argc, char** argv)
         
     }
     catch(...) {
-        cout << "Could not open the input image/video stream" << endl;
+        cout << "Could not open the input Image or Video stream" << endl;
         return 0;
     }
     
@@ -130,7 +130,7 @@ int main(int argc, char** argv)
         // Stop the program if reached end of video
         if (frame.empty()) {
             cout << "Done processing !!!" << endl;
-            cout << "Output file is stored as " << outputFile << endl;
+            cout << "Output File is stored as " << outputFile << endl;
             waitKey(3000);
             break;
         }
