@@ -108,7 +108,7 @@ int main(int argc, char** argv)
         
     }
     catch(...) {
-        cout << "Could not open the input image/video stream" << endl;
+        cout << "Could not open the input Image or Video stream" << endl;
         return 0;
     }
     
@@ -130,11 +130,7 @@ int main(int argc, char** argv)
         // Stop the program if reached end of video
         if (frame.empty()) {
             cout << "Done processing !!!" << endl;
-            cout << "Output file is stored as " << outputFile << endl;
-            
-            // hacktober contribution
-            cout << "its hacktober" << endl;
-            
+
             waitKey(3000);
             break;
         }
@@ -236,6 +232,7 @@ void drawBox(Mat& frame, int classId, float conf, Rect box, Mat& objectMask)
     
     //Display the label at the top of the bounding box
     int baseLine;
+    int xy;
     Size labelSize = getTextSize(label, FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
     box.y = max(box.y, labelSize.height);
     rectangle(frame, Point(box.x, box.y - round(1.5*labelSize.height)), Point(box.x + round(1.5*labelSize.width), box.y + baseLine), Scalar(255, 255, 255), FILLED);
@@ -256,5 +253,5 @@ void drawBox(Mat& frame, int classId, float conf, Rect box, Mat& objectMask)
     findContours(mask, contours, hierarchy, RETR_CCOMP, CHAIN_APPROX_SIMPLE);
     drawContours(coloredRoi, contours, -1, color, 5, LINE_8, hierarchy, 100);
     coloredRoi.copyTo(frame(box), mask);
-
+    print("hactober");
 }

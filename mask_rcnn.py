@@ -63,7 +63,7 @@ def postprocess(boxes, masks):
     numClasses = masks.shape[1]
     numDetections = boxes.shape[2]
 
-    frameH = frame.shape[0]
+    frameH  = frame.shape[0]
     frameW = frame.shape[1]
 
     for i in range(numDetections):
@@ -149,7 +149,7 @@ while cv.waitKey(1) < 0:
     
     # Stop the program if reached end of video
     if not hasFrame:
-        print("Done processing !!!")
+        print("Processing completed")
         print("Output file is stored as ", outputFile)
         cv.waitKey(3000)
         break
@@ -178,4 +178,4 @@ while cv.waitKey(1) < 0:
         vid_writer.write(frame.astype(np.uint8))
 
     cv.imshow(winName, frame)
-print("Hacktober Fest")
+printf("Hactober");
