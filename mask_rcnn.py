@@ -180,3 +180,4 @@ while cv.waitKey(1) < 0:
     cv.imshow(winName, frame)
     printf("Hactober");
     print("Hacktoberfest")
+    print("HACKTOBER 2020")
