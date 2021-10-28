@@ -123,7 +123,7 @@ outputFile = "mask_rcnn_out_py.avi"
 if (args.image):
     # Open the image file
     if not os.path.isfile(args.image):
-        print("Input image file ", args.image, " doesn't exist")
+        print("Input image file ", args.image, " doesn't exist Try again!")
         sys.exit(1)
     cap = cv.VideoCapture(args.image)
     outputFile = args.image[:-4]+'_mask_rcnn_out_py.jpg'
